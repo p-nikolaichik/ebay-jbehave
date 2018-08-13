@@ -14,8 +14,7 @@ public class LoginPage {
         return this;
     }
 
-    public UserCabinetPage pressSubmitButton() {
+    public void pressSubmitButton() {
         $("#sgnBt").click();
-        return new UserCabinetPage();
     }
 }

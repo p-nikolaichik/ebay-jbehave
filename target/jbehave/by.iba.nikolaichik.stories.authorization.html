@@ -1,0 +1,13 @@
+<div class="story">
+<h1></h1>
+<div class="path">by/iba/nikolaichik/stories/authorization.story</div>
+<div class="scenario">
+<h2>Scenario: User authorization</h2>
+<div class="step successful">Given open site <span class="step parameter">http:\\ebay.com</span></div>
+<div class="step successful">When site is opened, title is <span class="step parameter">Electronics, Cars, Fashion, Collectibles, Coupons and More | eBay</span></div>
+<div class="step successful">And close popup</div>
+<div class="step successful">And open login page</div>
+<div class="step successful">And enter login <span class="step parameter">atest.test1@mail.ru</span> and password <span class="step parameter">a12345678</span></div>
+<div class="step failed">Then user cabinet is opened, title is <span class="step parameter">Мой eBay Краткий обзор</span> <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;Мой eBay[&nbsp;]Краткий обзор&gt; but was:&lt;Мой eBay[ ]Краткий обзор&gt;</span></div>
+</div>
+</div>

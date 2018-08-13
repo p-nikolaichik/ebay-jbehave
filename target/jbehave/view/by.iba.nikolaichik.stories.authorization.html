@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>by.iba.nikolaichik.stories.authorization</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1></h1>
+<div class="path">by/iba/nikolaichik/stories/authorization.story</div>
+<div class="scenario">
+<h2>Scenario: User authorization</h2>
+<div class="step successful">Given open site <span class="step parameter">http:\\ebay.com</span></div>
+<div class="step successful">When site is opened, title is <span class="step parameter">Electronics, Cars, Fashion, Collectibles, Coupons and More | eBay</span></div>
+<div class="step successful">And close popup</div>
+<div class="step successful">And open login page</div>
+<div class="step successful">And enter login <span class="step parameter">atest.test1@mail.ru</span> and password <span class="step parameter">a12345678</span></div>
+<div class="step failed">Then user cabinet is opened, title is <span class="step parameter">Мой eBay Краткий обзор</span> <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;Мой eBay[&nbsp;]Краткий обзор&gt; but was:&lt;Мой eBay[ ]Краткий обзор&gt;</span></div>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

@@ -1,0 +1,6 @@
+#org.jbehave.core.embedder.StoryManager
+#Mon Aug 13 17:27:09 MSK 2018
+by/iba/nikolaichik/stories/authorization.story=15000
+threads=2
+total=15000
+threadAverage=7500

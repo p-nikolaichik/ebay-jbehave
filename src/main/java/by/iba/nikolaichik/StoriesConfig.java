@@ -1,7 +1,11 @@
 package by.iba.nikolaichik;
 
-import by.iba.nikolaichik.steps.AuthorizationSteps;
-import by.iba.nikolaichik.steps.PageFactory;
+import by.iba.nikolaichik.pages.LoginPage;
+import by.iba.nikolaichik.pages.PageFactory;
+import by.iba.nikolaichik.steps.HomePageSteps;
+import by.iba.nikolaichik.steps.LifeCycleSteps;
+import by.iba.nikolaichik.steps.LoginPageSteps;
+import by.iba.nikolaichik.steps.UserCabinetSteps;
 import com.github.valfirst.jbehave.junit.monitoring.JUnitReportingRunner;
 import org.jbehave.core.Embeddable;
 import org.jbehave.core.configuration.Configuration;
@@ -45,7 +49,7 @@ public class StoriesConfig extends JUnitStories {
     public Configuration configuration() {
         Class<? extends Embeddable> embeddableClass = this.getClass();
         ParameterConverters parameterConverters = new ParameterConverters();
-        Keywords keywords = new LocalizedKeywords(new Locale("ru"));
+        Keywords keywords = new LocalizedKeywords(new Locale("en"));
         Properties properties = new Properties();
         properties.setProperty("encoding", "UTF-8");
         return new MostUsefulConfiguration()
@@ -61,7 +65,8 @@ public class StoriesConfig extends JUnitStories {
 
     @Override
     public InjectableStepsFactory stepsFactory() {
-        return new InstanceStepsFactory(configuration(), new AuthorizationSteps(new PageFactory()));
+        PageFactory pageFactory = new PageFactory();
+        return new InstanceStepsFactory(configuration(), new LifeCycleSteps(), new HomePageSteps(pageFactory), new LoginPageSteps(pageFactory), new UserCabinetSteps(pageFactory));
     }
 
     @Override
